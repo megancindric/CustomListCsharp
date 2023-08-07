@@ -1,7 +1,7 @@
 namespace CustomListTests
 {
     [TestClass]
-    public class UnitTest1
+    public class AddMethodTests
     {
         [TestMethod]
         public void TestMethod1()
