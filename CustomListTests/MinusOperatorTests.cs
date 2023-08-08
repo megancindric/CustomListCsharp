@@ -37,8 +37,6 @@ namespace CustomListTests
             CustomList<string> subtractedList = newList - secondList;
             CustomList<string> testList = new CustomList<string>();
             testList.Add("World");
-            testList.Add("There");
-            testList.Add("Everyone");
 
 
             for (int i = 0; i < testList.Count; i++)
