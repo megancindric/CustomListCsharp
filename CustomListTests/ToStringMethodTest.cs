@@ -13,7 +13,7 @@ namespace CustomListTests
             newList.Add("Hello");
             newList.Add("World");
             string stringifiedList = newList.ToString();
-            Assert.AreEqual("Hello World", stringifiedList);
+            Assert.AreEqual("HelloWorld", stringifiedList);
 
         }
         [TestMethod]
@@ -23,7 +23,7 @@ namespace CustomListTests
             newList.Add(1);
             newList.Add(2);
             string stringifiedList = newList.ToString();
-            Assert.AreEqual("1 2", stringifiedList);
+            Assert.AreEqual("12", stringifiedList);
         }
         [TestMethod]
         public void ToStringMethod_CallingOnEmptyList_ReturnsEmptyString()

@@ -89,8 +89,17 @@ namespace CustomList
         public override string ToString()
         {
             //returns a single string that contains all items from array
-
-            return "";
+            string finalString = "";
+            int countValue = 0;
+            foreach(T item in items)
+            {
+                countValue++;
+                if (countValue <= count)
+                {
+                finalString += item.ToString();
+                }
+            }
+            return finalString;
         }
 
         public static CustomList<T> operator +(CustomList<T> firstList, CustomList<T> secondList)
