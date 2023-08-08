@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CustomList;
+﻿using CustomList;
 
 namespace CustomListTests
 {
     [TestClass]
 
-    internal class RemoveMethodTests
+    public class RemoveMethodTests
     {
         [TestMethod]
         public void RemoveMethod_RemoveOneItem_CountDecreasesByOne()
@@ -26,6 +21,7 @@ namespace CustomListTests
         {
             CustomList<string> newList = new CustomList<string>();
             newList.Add("Hello");
+            newList.Add("World");
             bool result = newList.Remove("World");
             Assert.IsTrue(result);
         }

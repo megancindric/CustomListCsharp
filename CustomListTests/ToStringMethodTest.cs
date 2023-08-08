@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CustomList;
+﻿using CustomList;
 
 namespace CustomListTests
 {
     [TestClass]
 
-    internal class ToStringMethodTest
+    public class ToStringMethodTest
     {
         [TestMethod]
         public void ToStringMethod_CallingToStringOnStringList_ReturnsStringOfValues()

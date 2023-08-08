@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CustomList;
+﻿using CustomList;
 
 namespace CustomListTests
 {
     [TestClass]
-    internal class MinusOperatorTests
+    public class MinusOperatorTests
     {
         [TestMethod]
         public void MinusOperator_FirstListLongerThanSecond_RemovesSpecifiedValues()

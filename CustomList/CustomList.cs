@@ -37,7 +37,7 @@ namespace CustomList
             if (count == capacity)
             {
                 T[] newItems = new T[capacity * 2];
-                for (int i = 0; i < capacity; i++)
+                for (int i = 0; i < count; i++)
                 {
                     newItems[i] = items[i];
                 }                
@@ -59,10 +59,24 @@ namespace CustomList
             //If 'item' was removed, return true. If no item was removed, return false.
             if (items.Contains(item))
             {
-                for(int i =0; i < count; i++)
+                int itemIndex = Array.IndexOf(items, item);
+                // Create new, updated array with same capacity
+                // If value is BEFORE itemIndex, assign as usual
+                // If item is AFTER, assign that index to NEXT value (index+1)
+                T[] newArray = new T[capacity];
+                for (int i = 0;i < count; i++)
                 {
-
+                    if( i < itemIndex)
+                    {
+                        newArray[i] = items[i];
+                    }
+                    else
+                    {
+                        newArray[i] = items[i + 1];
+                    }
                 }
+                items = newArray;
+                count--;
                 return true;
             }
             else
@@ -75,6 +89,7 @@ namespace CustomList
         public override string ToString()
         {
             //returns a single string that contains all items from array
+
             return "";
         }
 
