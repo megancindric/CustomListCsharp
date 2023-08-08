@@ -24,10 +24,30 @@ namespace CustomList
 
         }
 
+        public T this[int index]
+        {
+            get { return items[index]; }
+            set { items[index] = value; }
+        }
+
         //Member Methods (CAN DO)
         public void Add(T item)
         {
             //'item' parameter should be added to internal 'items' array
+            if (count == capacity)
+            {
+                T[] newItems = new T[capacity * 2];
+                for (int i = 0; i < capacity; i++)
+                {
+                    newItems[i] = items[i];
+                }                
+                capacity= newItems.Length;
+                items = newItems;
+               
+            }
+                            
+            items[count] = item;
+            count++;
             //if items array is at capacity, double capacity and create new array
             //transfer all items to new array
         }
@@ -37,7 +57,19 @@ namespace CustomList
             //If 'item' exists in the 'items' array, remove its first instance
             //Any items coming after the removed item should be shifted down so there is no empty index.
             //If 'item' was removed, return true. If no item was removed, return false.
+            if (items.Contains(item))
+            {
+                for(int i =0; i < count; i++)
+                {
+
+                }
+                return true;
+            }
+            else
+            {
             return false;
+
+            }
         }
 
         public override string ToString()
@@ -49,6 +81,10 @@ namespace CustomList
         public static CustomList<T> operator +(CustomList<T> firstList, CustomList<T> secondList)
         {
             //returns a single CustomList<T> that contains all items from firstList and all items from secondList 
+            for (int i = 0; i < secondList.Count; i++)
+            {
+                firstList.Add(secondList[i]);
+            }
             return null;
         }
 

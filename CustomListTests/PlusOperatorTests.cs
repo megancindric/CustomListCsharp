@@ -18,13 +18,13 @@ namespace CustomListTests
             newList.Add("Hello");
             newList.Add("World");
             CustomList<string> secondList = new CustomList<string>();
-            newList.Add("Hola");
+            secondList.Add("Hola");
             CustomList<string> combinedList = newList + secondList;
             CustomList<string> testList = new CustomList<string>();
             testList.Add("Hello");
             testList.Add("World");
             testList.Add("Hola");
-            for (int i = 0; i < combinedList.Count; i++)
+            for (int i = 0; i < testList.Count; i++)
             {
                 Assert.AreEqual(combinedList[i], testList[i]);
             }
@@ -36,14 +36,14 @@ namespace CustomListTests
             CustomList<string> newList = new CustomList<string>();
             newList.Add("Hello");
             CustomList<string> secondList = new CustomList<string>();
-            newList.Add("Hola");
-            newList.Add("World");
+            secondList.Add("Hola");
+            secondList.Add("World");
             CustomList<string> combinedList = newList + secondList;
             CustomList<string> testList = new CustomList<string>();
             testList.Add("Hello");
             testList.Add("Hola");
             testList.Add("World");
-            for (int i = 0; i < combinedList.Count; i++)
+            for (int i = 0; i < testList.Count; i++)
             {
                 Assert.AreEqual(combinedList[i], testList[i]);
             }
@@ -60,7 +60,7 @@ namespace CustomListTests
             CustomList<string> testList = new CustomList<string>();
             testList.Add("Hello");
             testList.Add("World");
-            for (int i = 0; i < combinedList.Count; i++)
+            for (int i = 0; i < testList.Count; i++)
             {
                 Assert.AreEqual(combinedList[i], testList[i]);
             }
