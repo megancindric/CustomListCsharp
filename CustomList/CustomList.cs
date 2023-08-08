@@ -12,13 +12,16 @@ namespace CustomList
         private T[] items;
         private int capacity;
         private int count;
-
+        public T[] Items { get { return items; } set { items = value; } }
+        public int Count { get { return count; } }
+        public int Capacity { get { return capacity; } }
         //Constructor
         public CustomList()
         {
-            //capacity = 
-            //count =
-            //items = 
+            count = 0;
+            items = new T[4];
+            capacity = items.Length;
+
         }
 
         //Member Methods (CAN DO)
